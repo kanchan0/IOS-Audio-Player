@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9Wj-lO-RgS">
+                                <rect key="frame" x="10" y="63" width="394" height="385"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="394" id="ToY-ic-xN7"/>
+                                    <constraint firstAttribute="height" constant="385" id="bf2-GW-dVm"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHO-4S-ljf">
+                                <rect key="frame" x="70" y="474" width="110" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="0QT-pO-TgJ"/>
+                                    <constraint firstAttribute="width" constant="110" id="wer-0Q-UWK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" image="play.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button_audio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3N-tm-4tN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXv-Vq-AfX">
+                                <rect key="frame" x="10" y="474" width="110" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="1BY-5g-55q"/>
+                                    <constraint firstAttribute="width" constant="110" id="lxx-Jq-KaB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" image="stop.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button_audio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6gv-pR-TXL"/>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPy-Ga-FKy"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kWH-mJ-3Rj">
+                                <rect key="frame" x="278" y="484" width="118" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="1YY-i8-HIB"/>
+                                    <constraint firstAttribute="height" constant="29" id="myg-Hc-7sz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="volumne:" destination="BYZ-38-t0r" eventType="valueChanged" id="WMD-Tc-luu"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ne-ry-Bfg">
+                                <rect key="frame" x="221" y="488" width="33" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="LHN-BT-HJI"/>
+                                    <constraint firstAttribute="height" constant="21" id="wts-hm-waa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Wj-lO-RgS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="5Tc-Qu-74k"/>
+                            <constraint firstItem="kWH-mJ-3Rj" firstAttribute="leading" secondItem="7ne-ry-Bfg" secondAttribute="trailing" constant="26" id="8Iy-ZD-SWP"/>
+                            <constraint firstItem="7ne-ry-Bfg" firstAttribute="leading" secondItem="WHO-4S-ljf" secondAttribute="trailing" constant="41" id="Eop-Wm-mvT"/>
+                            <constraint firstItem="WHO-4S-ljf" firstAttribute="top" secondItem="9Wj-lO-RgS" secondAttribute="bottom" constant="26" id="IIR-Gm-hH9"/>
+                            <constraint firstItem="MXv-Vq-AfX" firstAttribute="top" secondItem="9Wj-lO-RgS" secondAttribute="bottom" constant="26" id="QZq-t8-26P"/>
+                            <constraint firstItem="9Wj-lO-RgS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="UMF-ka-gug"/>
+                            <constraint firstItem="7ne-ry-Bfg" firstAttribute="top" secondItem="9Wj-lO-RgS" secondAttribute="bottom" constant="40" id="dn9-G9-Wte"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kWH-mJ-3Rj" secondAttribute="trailing" constant="20" id="fL2-iz-0hW"/>
+                            <constraint firstItem="MXv-Vq-AfX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kcK-mY-RB2"/>
+                            <constraint firstItem="kWH-mJ-3Rj" firstAttribute="leading" secondItem="7ne-ry-Bfg" secondAttribute="trailing" constant="26" id="l1V-Ne-hL9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Wj-lO-RgS" secondAttribute="trailing" constant="10" id="rwT-U7-8R0"/>
+                            <constraint firstItem="kWH-mJ-3Rj" firstAttribute="top" secondItem="9Wj-lO-RgS" secondAttribute="bottom" constant="36" id="sPx-gD-hgD"/>
+                            <constraint firstItem="7ne-ry-Bfg" firstAttribute="leading" secondItem="WHO-4S-ljf" secondAttribute="trailing" constant="41" id="xw1-1f-neX"/>
+                            <constraint firstItem="WHO-4S-ljf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="zTl-EF-3B8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249.27536231884059" y="-3.3482142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="11.jpg" width="5472" height="3648"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
